@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Feedback</title>
+  <link rel="stylesheet" type="text/css" href="css/feedback.css">
+  <link rel="stylesheet" type="text/css" href="css/footer&header.css">
+  <script src="./myScript.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo">
+        <img class="logomain" src="./images/logo.png">
+    </div>
+
+  <div class="menu">
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./gallary.html">Gallary</a></li>
+       
+
+    </ul>
+</div>
+
+<div class="signup">
+
+  <a href='../pages/login.html'> Log in </a>";
+  <a href='../pages/signup.html'> Signup </a>";
+
+</div>
+</div>
+
+
+<div class="wrapper">
+  <div class="review-form">
+    <h2>Write a Feedback</h2>
+    <textarea id="reviewText" placeholder="Write your feedback here"></textarea>
+  </div>
+  <div>
+    <button id="submitReview">Submit</button>
+  </div>
+  <div class ="Content">
+    <h1>Feedbacks</h1>
+    <ul id="reviewList" class="review-list">
+      <li>“I was completely impressed with their professionalism and customer service.”</li>
+
+      <li>" They took the time to listen to my concerns and provided expert advice on the necessary repairs. 
+        What impressed me the most was the transparency and honesty exhibited throughout the process."</li>
+
+      <li>“I found everything I was looking for at this store, and the prices were reasonable. 
+        The store was well-organized, and the staff was friendly and helpful.”.</li>
+
+    </ul>
+  </div>
+</div>
+
+
+<script>
+  // Get references to HTML elements
+  var reviewText = document.getElementById('reviewText');
+  var submitButton = document.getElementById('submitReview');
+  var reviewList = document.getElementById('reviewList');
+
+  // Add event listener to the submit button
+  submitButton.addEventListener('click', function() {
+    // Get the review text value
+    var text = reviewText.value;
+
+    // Create a new list item for the review
+    var listItem = document.createElement('li');
+    listItem.innerText = text;
+
+    // Append the new list item to the review list
+    reviewList.appendChild(listItem);
+
+    // Clear the review text area
+    reviewText.value = '';
+  });
+</script>
+
+
+<div class="footer">
+  <a href="./feedback.html">Feedback</a>
+  <a href="./images/T&C.pdf">Terms & Conditions</a>
+  <a href="./images/P&P.pdf">Privacy policy</a>
+  <a href="./contactus.html">Contact us</a>
+
+</div>
+
+
+</body>
+</html>
